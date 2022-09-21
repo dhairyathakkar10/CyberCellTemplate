@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bf95ea0a2c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <title>CyberCell VIIT</title>
+    <style>
+        *{
+            font-family: 'Share Tech', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 10px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            /* background-image: url(./Images/cyber-hacker-attack-background-skull-free-vector.jpg); */
+            /* opacity: .8; */
+        }
+        .header{
+            position: sticky;
+            top: 0;
+            right: 0;
+            height: 13%;
+            width: 100vw;
+            background-color: rgb(100, 0, 0);
+            color:white;
+            vertical-align: middle;
+            text-align: center;
+            padding: .2rem;
+            animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        .header img{
+            width: 4%;
+        }
+        .header h1{
+            font-size: 3rem;
+            margin-left: 2rem;
+        }
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin-top: 2rem;
+            font-size: 1.4rem;
+        }
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ab0000,#f31818, #fb3030, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        .glow-on-hover-1 {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(100, 0, 0);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin-top: 2rem;
+            font-size: 1.4rem;
+        }
+        .glow-on-hover-1:before {
+            content: '';
+            background: linear-gradient(45deg, #ab0000,#f31818, #fb3030, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .glow-on-hover-1:hover:before {
+            opacity: 1;
+        }
+        .glow-on-hover-1:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(100, 0, 0);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @-moz-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-o-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .main_content{
+            color: white;
+            text-align: left!important;
+            padding: 5rem 30rem;
+            background-color: black;
+        }
+        p.mailP{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        strong{
+            font-size: 2rem;
+        }
+        i{
+            font-size: 2.2rem;
+        }
+        img.flags{
+            width: 2%;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: underline;
+            font-size: 2rem;
+            color: white;
+        }
+        .why{
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .why h2{
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .reason{
+            display: flex;
+            align-items: center;
+            margin: 2rem;
+            font-size: 2rem;
+        }
+        .block1{
+            width: 50%;
+            padding: 0 5rem;
+        }
+        .block2{
+            width: 50%;
+            padding: 0 5rem;
+        }
+        .wrapper{
+            display: flex;
+            justify-content:space-around
+        }
+        .reason img{
+            width: 5%;
+            margin-right: 2rem;
+        }
+        .reason p{
+            margin-right: 2rem;
+            font-weight: bold;
+            color: #B30301;
+            font-size: 2rem;
+        }
+        .reason span{
+            font-size: 2rem;
+            margin-right: 2rem;
+            font-weight: bold;
+            margin-bottom: 0!important;
+        }
+        .footer{
+            background-color: rgb(100, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu1{
+            padding: 5rem;
+            width: 40%;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu2{
+            padding: 5rem;
+            width: 40%;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu2 span{
+            font-size: 2rem;
+            text-align: center;
+            color:white;
+        }
+        ul{
+            list-style: none;
+            padding-left: 2rem;
+            
+        }
+        li{
+            display: inline-block;
+            font-size: 2rem;
+            margin: 1rem;
+            cursor: pointer;
+            color:white;
+        }
+        .menu1 p{
+            display: inline-block;
+            font-size: 2rem;
+            vertical-align: middle;
+            margin-left: 2rem;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        input{
+            display: inline-block;
+            padding: .7rem;
+            margin: .8rem;
+            border-radius: .5rem;
+            border: none!important;
+            width: 50%;
+            background-color: black;
+            color:#B30301;
+            font-size: 1.4rem;
+        }
+
+        .light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: #B30301;
+    box-shadow: #ff0400 0px 0px 3rem 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+  -webkit-animation: floatUp 4s infinite linear;
+  -moz-animation: floatUp 4s infinite linear;
+  -o-animation: floatUp 4s infinite linear;
+  animation: floatUp 4s infinite linear;
+   -webkit-transform: scale(1.0);
+   -moz-transform: scale(1.0);
+   -o-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.x2{
+  -webkit-animation: floatUp 7s infinite linear;
+  -moz-animation: floatUp 7s infinite linear;
+  -o-animation: floatUp 7s infinite linear;
+  animation: floatUp 7s infinite linear;
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3{
+  -webkit-animation: floatUp 2.5s infinite linear;
+  -moz-animation: floatUp 2.5s infinite linear;
+  -o-animation: floatUp 2.5s infinite linear;
+  animation: floatUp 2.5s infinite linear;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x4{
+  -webkit-animation: floatUp 4.5s infinite linear;
+  -moz-animation: floatUp 4.5s infinite linear;
+  -o-animation: floatUp 4.5s infinite linear;
+  animation: floatUp 4.5s infinite linear;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5{
+  -webkit-animation: floatUp 8s infinite linear;
+  -moz-animation: floatUp 8s infinite linear;
+  -o-animation: floatUp 8s infinite linear;
+  animation: floatUp 8s infinite linear;
+  -webkit-transform: scale(2.2);
+  -moz-transform: scale(2.2);
+  -o-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6{
+  -webkit-animation: floatUp 3s infinite linear;
+  -moz-animation: floatUp 3s infinite linear;
+  -o-animation: floatUp 3s infinite linear;
+  animation: floatUp 3s infinite linear;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x7{
+  -webkit-animation: floatUp 5.3s infinite linear;
+  -moz-animation: floatUp 5.3s infinite linear;
+  -o-animation: floatUp 5.3s infinite linear;
+  animation: floatUp 5.3s infinite linear;
+  -webkit-transform: scale(3.2);
+  -moz-transform: scale(3.2);
+  -o-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8{
+  -webkit-animation: floatUp 4.7s infinite linear;
+  -moz-animation: floatUp 4.7s infinite linear;
+  -o-animation: floatUp 4.7s infinite linear;
+  animation: floatUp 4.7s infinite linear;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9{
+  -webkit-animation: floatUp 4.1s infinite linear;
+  -moz-animation: floatUp 4.1s infinite linear;
+  -o-animation: floatUp 4.1s infinite linear;
+  animation: floatUp 4.1s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+button:focus{
+  outline: none;
+}
+
+@-webkit-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@media only screen and (max-width: 600px){
+    .header{
+        width: 100vw;
+    }
+    .header img{
+        width: 18%;
+    }
+    .main_content{
+        padding: 5rem;
+    }
+    .block1{
+        padding: 0;
+    }
+    .block2{
+        padding: 0;
+    }
+    .menu1{
+        display: none;
+    }
+    .menu2{
+        width: 100%;
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu2 span{
+        margin: 1rem;
+    }
+    ul{
+        padding-left: 0rem;        
+    }
+    li{
+        margin: 1rem;
+    }
+    .company{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .company img{
+        padding: 2rem;
+    }
+
+}
+    </style>
+</head>
+<body>
+        <div class="header">
+            <img src="./Images/logo.png" alt="logo"/>
+            <h1>CyberCell, VIIT</h1>
+        </div>
+        <div class='light x1'></div>
+    <div class='light x2'></div>
+    <div class='light x3'></div>
+    <div class='light x4'></div>
+    <div class='light x5'></div>
+    <div class='light x6'></div>
+    <div class='light x7'></div>
+    <div class='light x8'></div>
+    <div class='light x9'></div>
+        <div class="container">
+        <div class="main_content">
+            <div class="mail">
+                <p class="mailP">Respected Sir / Madam,</p>
+                <p class="mailP"><strong> VIIT (CyberSecurity Club of VIIT College, Pune India)</strong> is a tight-knit group of students aiming to study <i class="fa fa-book" aria-hidden="true"></i> and learn <i class="fa fa-graduation-cap" aria-hidden="true"></i> more about the cyberSecurity <i class="fa fa-lock" aria-hidden="true"></i> domain. And, with this aim, we are constantly trying to upgrade ourselves by working collaboratively <i class="fa fa-users" aria-hidden="true"></i> on various topics.</p>
+                <p class="mailP">We have been organizing the VishwaCTF and inviting cybersecurity enthusiasts from all over the world to participate in the same. Like every year, we will be organizing the VishwaCTF this time as well, but on a larger scale with a much bigger number of participants!</p>
+                <p class="mailP">VishwaCTF  '21 is the Flagship event of CyberCell, VIIT. At its inception, it was the <strong> first CTF from Maharashtra</strong> and <strong>3rd CTF from India.</strong> We again aim for higher heights going global with the 5th Edition of VishwaCTF. We have reached more than <strong>2100 participants</strong> with <strong>763 teams</strong> from <strong>70+ different countries.</strong>(<img class="flags" src="./Images/Flags/india-svgrepo-com.svg"/>, <img class="flags" src="./Images/Flags/canada-svgrepo-com.svg"/>, <img class="flags" src="./Images/Flags/france-svgrepo-com.svg"/>, <img class="flags" src="./Images/Flags/singapore-svgrepo-com.svg"/>, <img class="flags" src="./Images/Flags/united-states-of-america-svgrepo-com.svg"/> &amp; many more....)</p>
+                <p class="mailP">As you might expect, organizing an event on such a large scale requires similar kinds of funds. That is why we are looking for partners that are willing to sponsor the VishwaCTF '22. And, we would like it if you could become one of our esteemed sponsors. There's a lot to benefit for both our organizations through this kind of partnership. </p>
+                <p class="mailP">We are looking forward to having a small meeting where we can discuss the partnership program in detail. Attached to this mail is a detailed presentation of the event, you can have a look at it.</p>
+                <p class="mailP">Looking forward to a positive response from your end. In case of any query or clarification feel free to <a href="#contactUs">contact us</a> at any time.</p>
+            </div>
+            <div class="why">
+                <h2>Why Should you Collaborate with Us?</h2>
+                <div class="wrapper">
+                    <div class="block1">
+                        <div class="reason">
+                            <img class="reasonImg" src="./Images/1st.png">
+                            <span>1st CTF from Maharashtra</span>
+                        </div>
+                        <div class="reason">
+                            <img class="reasonImg" src="./Images/3rd.png">
+                            <span>3rd CTF from India</span>
+                        </div>
+                    </div>
+                    <div class="block2">
+                        <div class="reason">
+                            <p id="counter"></p>
+                            <span>Participants</span>
+                        </div>
+                        <div class="reason">
+                            <p id="counter1"></p>
+                            <span style="margin-left: 2rem;">Different countries.</span>
+                        </div>
+                        <div class="reason">
+                            <p id="counter2"></p>
+                            <span style="margin-left: 2.4rem;">Teams</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="glow-on-hover-1" type="button">Know More About Us!</button>
+            </div>
+            <div class="why">
+                <h2>Our Partners</h2>
+                <div class="company">
+                   <img src="./Images/companies/1.png" />
+                   <img src="./Images/companies/2.jpg" />
+                   <img src="./Images/companies/3.png" />
+                   <img src="./Images/companies/4.png" />
+                   <img src="./Images/companies/5.png" />
+                   <img src="./Images/companies/6.png" />
+                   <img src="./Images/companies/7.png" />
+                   <img src="./Images/companies/8.png" />
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="menu1">
+                <img src="./Images/logo.png" style="width: 18%;" />
+                <p class="logo_footer">CyberCell, VIIT</p>
+            </div>
+            <div class="menu2">
+                <span>Links : </span>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Out Team</li>
+                    <li>Our Mentors</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let counts=setInterval(updated);
+    let upto=1500;
+    function updated(){
+        var count= document.getElementById("counter");
+        count.innerHTML= ++upto + " +";
+        if(upto === 2100)
+        {
+            clearInterval(counts);
+        }
+    }
+
+    let counts2=setInterval(updated1);
+    let upto2=0;
+    function updated1(){
+        var count= document.getElementById("counter1");
+        count.innerHTML= ++upto2 + " +";
+        if(upto2 === 70)
+        {
+            clearInterval(counts2);
+        }
+    }
+
+    let counts3=setInterval(updated2);
+    let upto3=200;
+    function updated2(){
+        var count= document.getElementById("counter2");
+        count.innerHTML= ++upto3;
+        if(upto3 === 763)
+        {
+            clearInterval(counts3);
+        }
+    }
+</script>
+</html>
